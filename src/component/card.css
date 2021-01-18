@@ -1,0 +1,195 @@
+* {
+  box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6, p, div {
+  color: #2b546a;
+  font-weight: normal;
+}
+
+h1 {
+ font-size: 1.5rem;
+}
+
+body {
+ margin: 0;
+ padding: 0;
+}
+
+h1 {
+ padding-top: 40px;
+ text-align:center;
+}
+
+p {
+ text-align:center;
+}
+.pokemon-item {
+ width: 20%;
+ height: 250px;
+ background: #ffffff;
+ margin-left: 4%;
+ margin-top: 15px;
+ box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+ border-radius: 3px;
+ position: relative;
+ float: left;
+}
+.pokemon-item:after {
+  content: "";
+  /* display: table; */
+  clear: both;
+}
+
+.pokemon-name {
+ position: absolute;
+ left: 0;
+ right: 0;
+ top: 20px;
+ margin: auto;
+ text-align: center;
+}
+
+.pokemon-name:after {
+  content: "";
+  /* display: table; */
+  clear: both;
+}
+
+.pokemon-image {
+ position: absolute;
+ left: 0;
+ right: 0;
+ bottom: 40px;
+ margin: auto;
+ height: auto;
+ width: 60%;
+ top: -5px;
+}
+
+.row {margin: 0 -5px;}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.buttondiv{
+  width: 100%;
+}
+
+.buttonpage{
+  margin-top: 20px;
+  margin-left: 45%;
+}
+
+.main-topic {
+	width: 100%;
+  /* margin: 0 auto; */
+  margin-top: 5%;
+	clear: both;
+  display: flex;
+}
+
+.right-picture{
+  width: 50%;
+  margin-left: 10%;
+  margin-top: 2%;
+}
+.right-picture > img{
+  width: 70%;
+  display: block;
+  border: 2px solid black;
+}
+/* .list{ */
+  /* height: 100px; */
+  /* margin-bottom: -10px; */
+/* } */
+.clear{
+	clear: both;
+}
+
+.left-text{
+  width: 100%;
+}
+
+.left-text > h2 {
+  text-align: center;
+}
+
+ul.ullist li{
+  float:left !important; 
+  width:50%;
+}
+
+.buttoncatch{
+  margin-top: 10px;
+  width: 70%;
+  float: left;
+}
+
+.buttondetail{
+  width: 80%;
+}
+
+.buttondetails{
+  width: 80%;
+  margin-left: 2%;
+}
+
+.buttondivdetail{
+  margin-top: 80%; 
+}
+
+.buttondivdetail > a{
+  text-align:center;
+  display:block;
+}
+@media screen and (max-width: 400px) {
+  .pokemon-item {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .pokemon-image {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+    margin: auto;
+    height: auto;
+    width: 30%;
+    top: -5px;
+   }
+
+  .buttondivdetail{
+    margin-top: 50%; 
+  }
+  
+  .buttondivdetail > a{
+    text-align:center;
+    display:block;
+  }
+
+  .buttondetail{
+    width: 80%;
+  }
+  
+  .buttondetails{
+    width: 80%;
+    margin-left: 2%;
+  }
+
+  .right-picture{
+    width: 50%;
+    margin-left: 10%;
+    margin-top: 2%;
+  }
+  .right-picture > img{
+    width: 80%;
+    display: block;
+    border: 2px solid black;
+  }
+}
