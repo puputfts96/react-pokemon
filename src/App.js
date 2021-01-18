@@ -6,21 +6,21 @@ import Detail from './container/Detail';
 import Home from './container/Home';
 import PokemonPage from './container/PokemonPage';
 
-import {BrowserRouter,Route,Switch} from 'react-router-dom';
+import {BrowserRouter,HashRouter,Route,Switch} from 'react-router-dom';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter  >
       <div className="App">
         <Header/>
         <Switch>
-          <Route exact path="/" component={Home}/>
+          <Route exact={true} path="/" component={Home}/>
           <Route path="/detail/:id" component={Detail}/>
           <Route path="/mypokemon" component={PokemonPage}/>
           {/* <Route path="/test" component={Test}/> */}
         </Switch>
       </div>
-      </BrowserRouter>
+      </HashRouter>
   );
 }
 
