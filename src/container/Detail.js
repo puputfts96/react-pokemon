@@ -8,6 +8,7 @@ import ReactDOM from "react-dom";
 import Modal from "../component/Modal";
 import '../component/modal.css'
 import pokemonDatabase from "../pokemonDatabase";
+import { useHistory } from "react-router-dom";
 
 const Detail = (id) => {
     const ids=id.match.params.id;
@@ -17,7 +18,7 @@ const Detail = (id) => {
     const [types, setType] = useState([]);
     const [loading, setLoading] = useState(true);
     const [namepokemon, setNamePokemon] = useState({'name':'', 'id':'', 'status':false});
-    
+    const history = useHistory();
     
     // const moves=[];
     useEffect(() => {
@@ -46,7 +47,13 @@ const Detail = (id) => {
     }
     const modalClose= () => {
         setModals(false);
-        console.log(modals)
+        // console.log(modals)
+        setNamePokemon({
+            'name':'', 
+            'id':pokemon.id, 
+            'status': false
+        }
+    )
     }
 
     const onChangeName= e => {
@@ -78,7 +85,8 @@ const Detail = (id) => {
             pokemonDatabase.create(data)
             .then(() => {
                 console.log("Created new item successfully!");
-                modalClose()
+                modalClose();
+                history.push("/mypokemon");
             })
             .catch((e) => {
                 console.log(e);

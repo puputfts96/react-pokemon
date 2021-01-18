@@ -1,7 +1,7 @@
 import React from 'react';
 import './card.css';
 import { Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import '../dist/css/bootstrap.min.css';
 import pokemonDatabase from "../pokemonDatabase";
 
@@ -13,7 +13,8 @@ class card extends React.Component {
     }
     removePokemon(id){
         pokemonDatabase.delete(this.props.ids);
-        window.location.assign('/mypokemon/');
+        // window.location.assign('/mypokemon/');
+        window.location.reload();
     }
     render() {
         const isHome=this.props.status;
@@ -37,9 +38,9 @@ class card extends React.Component {
                         <Button color="info" className='buttondetail'>Detail</Button>
                     </Link>
                 ):(
-                    <Button onClick={this.removePokemon} className='buttondetails'>
-                       Lepas Pokemon
-                    </Button>
+                        <Button onClick={this.removePokemon} className='buttondetails'>
+                        Lepas Pokemon
+                        </Button>
                 )}
             </div> 
         </>

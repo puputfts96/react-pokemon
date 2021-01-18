@@ -121,6 +121,7 @@ p {
 ul.ullist li{
   float:left !important; 
   width:50%;
+  text-align: left;
 }
 
 .buttoncatch{
